@@ -9,7 +9,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { UserregisterComponent } from './master/userregister/userregister.component';
 import { QuarryregisterComponent } from './master/quarryregister/quarryregister.component';
 import { StockpointComponent } from './master/stockpoint/stockpoint.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +22,8 @@ import { StockpointComponent } from './master/stockpoint/stockpoint.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

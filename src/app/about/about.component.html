@@ -1,1 +1,49 @@
-<p>about works!</p>
+<hr>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+
+      <h5>Data Binding in {{title}} </h5>
+
+      <hr>
+
+      <h5>Using Component Directive</h5>
+      <button class="btn btn-primary" (click)="btnClick()"> Click Me</button>
+      <hr>
+      <h5>Using Structural Directive</h5>
+      <div *ngIf="chackngif">this is ng if eg</div>
+      <select>
+        <option *ngFor="let i of months">{{i}}</option>
+      </select>
+      <hr>
+      <h5>Using Attribute Directive</h5>
+      <p [ngStyle]="{'color':'red'}">NgStyle example in {{title}}</p>
+      <hr>
+
+    </div>
+    <div class="col-6">
+      <h5>Data Binding</h5>
+      <h6>One-way data bindingg - {{title}}</h6>
+      <hr>
+      <h5>Event Binding</h5>
+      <button class="btn btn-primary" (click)="btnClick()"> Click Me</button>
+      <hr>
+      <h5>Property Binding</h5>
+      <input type="text" [value]="userName">
+      <hr>
+      <h5>Class Binding</h5>
+      <p [class]="myCSSClass">This paragraph class comes from *myClass* property </p>
+      <p [class]="applyCSSClass">This paragraph class does not apply</p>
+      <hr>
+      <h5>style Binding</h5>
+      <p [style.color]="myColor">Text color is styled using style binding</p>
+      <hr>
+      <h5>Two-way data Binding</h5>
+      <input type="text" [(ngModel)]="userName" />
+      <p>Two way binding! Hello {{ userName }}!</p>
+      <hr>
+    </div>
+  </div>
+
+
+</div>
