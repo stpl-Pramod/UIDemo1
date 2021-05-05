@@ -2,7 +2,42 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-6">
-
+      <div class="row">
+        <div class="col-md-7">
+          <div class="card mb-2">
+            <div class="card-header">
+              Pipe - Built-in Pipes
+            </div>
+            <div class="card-body">
+              <p class="card-text">uppercase - {{title | uppercase}}  </p>
+              <p class="card-text">lowercase  - {{title | lowercase }}  </p>
+              <p class="card-text">Currencypipe - {{6589.23 | currency:"INR"}}  </p>
+              <p class="card-text">Date pipe - {{todaydate | date:'dd/mm/yy'}}  </p>
+              <p class="card-text">Date pipe -{{todaydate | date:'shortTime'}}  </p>
+              <p class="card-text">Currencypipe - {{6589.23 | currency:"INR"}}  </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="card mb-3">
+            <div class="card-header">
+              Pipe - Custom Pipes
+            </div>
+            <div class="card-body">
+              <p class="card-text">Custom pipe - {{gender | gender}}  </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              Service - create new service
+            </div>
+            <div class="card-body">
+              <!-- <p class="card-text">service data - {{servName}}}  </p> -->
+              <p class="card-text">service data - {{servName}}  </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <h5>Data Binding in {{title}} </h5>
 
       <hr>
@@ -19,9 +54,46 @@
       <h5>Using Attribute Directive</h5>
       <p [ngStyle]="{'color':'red'}">NgStyle example in {{title}}</p>
       <hr>
+      
 
     </div>
     <div class="col-6">
+      <table class="table border" style="max-height: 200px; overflow-y: auto;">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col" >userid</th>
+            <th scope="col">id</th>
+            <th scope="col">title</th>
+          </tr>
+        </thead>
+        <tbody style="max-height: 200px; overflow-y: auto;">
+          <tr *ngFor="let item of data">
+            <td>{{item.userId}}</td>
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            
+          </tr>
+        </tbody>
+      </table>
+      <!-- <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+        </tbody>
+      </table> -->
+
       <h5>Data Binding</h5>
       <h6>One-way data bindingg - {{title}}</h6>
       <hr>

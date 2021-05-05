@@ -1,15 +1,24 @@
 <p>master works!</p>
+<!-- <h4>Child component</h4>
+<p>{{hero.name}}</p> -->
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-4">
-            <!-- <ul>
-                <li><a routerLink="/userregister">user register</a> </li>
-                <li><a routerLink="/quarryregister">quarry register</a> </li>
-                <li><a routerLink="/stockpoint">stockpoint register</a> </li>
-            </ul> -->
-           
-        <div class="col-4">
-            <!-- <router-outlet></router-outlet> -->  
-        </div>
+  <div class="row">
+    <div class="col-md-4">
+      <ul>
+        <li><a [routerLink]="['./userregister']" routerLinkActive="active">user register</a> </li>
+        <li><a routerLink="./quarryregister">quarry register</a> </li>
+        <li><a routerLink="./stockpoint">stockpoint register</a> </li>
+
+      </ul>
+      <!-- <ul>
+        <li><a href="#">user register</a> </li>
+        <li><a href="#">quarry register</a> </li>
+        <li><a href="#">stockpoint register</a> </li>
+      </ul> -->
+
+      <div class="col-md-8">
+        <!-- <app-quarryregister></app-quarryregister> -->
+        <router-outlet></router-outlet>
+      </div>
     </div>
-</div>
+  </div>

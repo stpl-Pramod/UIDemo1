@@ -1,3 +1,6 @@
+
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -8,17 +11,30 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/home" routerLinkActive="active">Home <span class="sr-only">Home</span></a>
+        <a class="nav-link" routerLink="/home" routerLinkActive="active">Home <span class="sr-only">Home</span></a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link" routerLink="/about" routerLinkActive="active">About <span class="sr-only">About</span></a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/master" routerLinkActive="active">master </a>
+      <li class="nav-item ">
+        <!-- <a class="nav-link" routerLink="/master" routerLinkActive="active">master </a>
+        <a class="nav-link" routerLink="/quarryregister" routerLinkActive="active">master </a> -->
+        <!-- <a class="nav-link" routerLink="/userregister" routerLinkActive="active">master </a> -->
+        <!-- <a class="dropdown-item" [routerLink]="['./userregister']" routerLinkActive="active">master 1</a> -->
+        
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/product" routerLinkActive="active">Product <span
-            class="sr-only">Product</span></a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Master
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="./master/quarryregister">quarryregister</a>
+          <a class="dropdown-item" routerLink="./master/userregister">userregister</a>
+          <a class="dropdown-item" routerLink="./master/stockpoint">stockpoint</a>
+        </div>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="/product" routerLinkActive="active">Product  </a>
       </li>
     </ul>
 
@@ -29,3 +45,5 @@
 
 
 <router-outlet></router-outlet>
+<!-- <h2>child component</h2>
+<app-master [hero]="data"></app-master> -->

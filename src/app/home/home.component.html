@@ -1,1 +1,25 @@
-<p>home works!</p>
+<hr>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <h5>Simple Form</h5>
+                <form #simpleForm="ngForm" (ngSubmit)="getUserValue(simpleForm.value)">
+                    <input type="text" ngModel name="username" placeholder="Enter Name"><br>
+                    <input type="text" ngModel name="age" placeholder="Enter age"><br>
+                    <input type="text" ngModel name="address" placeholder="Enter address"><br>
+                    <button>Get User Value</button>
+                </form>
+            <hr>
+        </div>
+        <div class="col-md-4">
+            <h5>Simple Form</h5>
+                <form #simpleForm="ngForm" (ngSubmit)="getUserValue(simpleForm.value)">
+                    <input type="text" ngModel name="username" placeholder="Enter Name"><br>
+                    <input type="text" ngModel name="age" placeholder="Enter age"><br>
+                    <input type="text" ngModel name="address" placeholder="Enter address"><br>
+                    <button>Get User Value</button>
+                </form>
+            <hr>
+        </div>
+    </div>
+</div>

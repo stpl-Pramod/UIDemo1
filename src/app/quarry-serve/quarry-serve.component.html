@@ -1,0 +1,206 @@
+<div class="container-fluid mt-4">
+  <div class="row">
+    <div class="col-md-2">
+        <ul>
+            <li><a href="#">user register</a> </li>
+            <li><a href="#">quarry register</a> </li>
+            <li><a href="#">stockpoint register</a> </li>
+          </ul>
+    </div>
+    <!-- <div class="col-md-10">
+      <form #quarryForm="ngForm" (ngSubmit)="getUserValue(quarryForm.value)">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="QuarryName" class="col-sm-5 col-form-label">Quarry Name</label>
+              <div class="col-sm-7">
+                <input type="text" ngModel class="form-control-plaintext" name="QuarryName" id="QuarryName"
+                  placeholder="Enter Quarry Name">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="PlotLocation" class="col-sm-5 col-form-label">Plot Location</label>
+              <div class="col-sm-7">
+                <input type="text" ngModel class="form-control-plaintext" name="PlotLocation" id="PlotLocation"
+                  placeholder="Enter Plot Location">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="RiverName" class="col-sm-5 col-form-label">River/Coast Name</label>
+              <div class="col-sm-7">
+                <input type="text" ngModel class="form-control-plaintext" name="RiverName" id="RiverName"
+                  placeholder="Enter River/Coast Name">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="PlotOwnership" class="col-sm-5 col-form-label">Plot Ownership</label>
+              <div class="col-sm-7">
+                <input type="text" ngModel class="form-control-plaintext" name="PlotOwnership" id="PlotOwnership"
+                  placeholder="Enter Plot Ownership">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="Government" class="col-sm-5 col-form-label">Government </label>
+              <div class="col-sm-7">
+                <input type="text" ngModel class="form-control-plaintext" name="Government " id="Government "
+                  placeholder="Enter Government ">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="Department " class="col-sm-5 col-form-label">Department </label>
+              <div class="col-sm-7">
+                <input type="text" ngModel class="form-control-plaintext" name="Department " id="Department "
+                  placeholder="Enter Department ">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="District " class="col-sm-5 col-form-label">District </label>
+              <div class="col-sm-7">
+                <input type="text" ngModel class="form-control-plaintext" name="District " id="District "
+                  placeholder="Enter District ">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="Taluka " class="col-sm-5 col-form-label">Taluka </label>
+              <div class="col-sm-7">
+                <input type="text" ngModel class="form-control-plaintext" name="Taluka " id="Taluka "
+                  placeholder="Enter Taluka ">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="Village " class="col-sm-5 col-form-label">Village </label>
+              <div class="col-sm-7">
+                <input type="text" ngModel class="form-control-plaintext" name="Village" id="Village"
+                  placeholder="Enter Village">
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <button class="btn btn-sm btn-primary">Get User Value</button>
+
+            </div>
+        </div>
+      </form>
+    </div> -->
+    <div class="col-md-10">
+      <form [formGroup]="quarryForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="QuarryName" class="col-sm-5 col-form-label">Quarry Name</label>
+              <div class="col-sm-7">
+                <input type="text"  class="form-control-plaintext" formControlName="QuarryName" id="QuarryName"
+                  placeholder="Enter Quarry Name">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="PlotLocation" class="col-sm-5 col-form-label">Plot Location</label>
+              <div class="col-sm-7">
+                <input type="text"  class="form-control-plaintext" formControlName="PlotLocation" id="PlotLocation"
+                  placeholder="Enter Plot Location" required>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="RiverName" class="col-sm-5 col-form-label">River/Coast Name</label>
+              <div class="col-sm-7">
+                <input type="text"  class="form-control-plaintext" formControlName="RiverName" id="RiverName"
+                  placeholder="Enter River/Coast Name">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="PlotOwnership" class="col-sm-5 col-form-label">Plot Ownership</label>
+              <div class="col-sm-7">
+                <input type="text"  class="form-control-plaintext" formControlName="PlotOwnership" id="PlotOwnership"
+                  placeholder="Enter Plot Ownership">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="Government" class="col-sm-5 col-form-label">Government </label>
+              <div class="col-sm-7">
+                <input type="text"  class="form-control-plaintext" formControlName="Government" id="Government "
+                  placeholder="Enter Government ">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="Department " class="col-sm-5 col-form-label">Department </label>
+              <div class="col-sm-7">
+                <input type="text"  class="form-control-plaintext" formControlName="Department" id="Department "
+                  placeholder="Enter Department">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="District " class="col-sm-5 col-form-label">District </label>
+              <div class="col-sm-7">
+                <input type="text"  class="form-control-plaintext" formControlName="District" id="District "
+                  placeholder="Enter District ">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="Taluka " class="col-sm-5 col-form-label">Taluka </label>
+              <div class="col-sm-7">
+                <input type="text"  class="form-control-plaintext" formControlName="Taluka" id="Taluka"
+                  placeholder="Enter Taluka ">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group row">
+              <label for="Village " class="col-sm-5 col-form-label">Village </label>
+              <div class="col-sm-7">
+                <input type="text"  class="form-control-plaintext" formControlName="Village" id="Village"
+                  placeholder="Enter Village">
+              </div>
+            </div>
+          </div> 
+        </div>
+
+        <!-- <input type="text" ngModel name="username" placeholder="Enter Name"><br> -->
+        <!-- <input type="text" ngModel name="age" placeholder="Enter age"><br>
+        <input type="text" ngModel name="address" placeholder="Enter address"><br> -->
+        <hr>
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <button class="btn btn-sm btn-primary">Get User Value</button>
+
+            </div>
+        </div>
+      </form>
+      <p>
+        Form Status: {{ quarryForm.status }}
+      </p>
+    </div>
+  </div>
+</div>

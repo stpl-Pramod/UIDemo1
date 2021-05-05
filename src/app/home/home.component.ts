@@ -11,5 +11,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  getUserValue(value:any){
+    console.warn(value)
+  }
 
 }
